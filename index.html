@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>قراءة القرآن الكريم — المصحف</title>
+
+  <!-- Google Fonts: Noto Naskh Arabic for traditional quranic feel & Tajawal for UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="موقع لقراءة القرآن الكريم بصور المصحف — تصميم عصري، متجاوب، وواضح." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>المصحف الرقمي</h1>
+      <p class="subtitle">هذا العمل إهداء لوالدي اطال الله في عمرهما</p>
+      <p class="subtitle">Devloper Yousif AlKhulaifi</p>
+    </div>
+
+    <div class="controls">
+      <label class="compact">
+        <input type="checkbox" id="toggleDark"> وضع داكن
+      </label>
+
+      <div class="small-controls">
+        <button id="prevPage" title="الصفحة السابقة">◀</button>
+        <input id="pageInput" type="number" min="1" step="1" aria-label="اذهب إلى الصفحة" />
+        <span id="totalPages">/ 604</span>
+        <button id="nextPage" title="الصفحة التالية">▶</button>
+      </div>
+
+      <div class="action-buttons">
+        <button id="bookmarkBtn" title="حفظ الصفحة">☆</button>
+        <button id="fullscreenBtn" title="ملء الشاشة">🗖</button>
+        <button id="downloadBtn" title="تحميل الصفحة">⬇</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <div class="search-box">
+        <input id="searchSurah" type="search" placeholder="ابحث عن سوره..." />
+      </div>
+
+      <nav class="surah-list" id="surahList">
+        <!-- سيتم تعبئتها بواسطة JS -->
+      </nav>
+
+      <div class="notes">
+        <h4>تعليمات</h4>
+        <ul>
+          <li>استخدم الأسهم ← → أو أزرار التصفح للتنقل.</li>
+          <li>اضغط على ☆ لحفظ الصفحة في المفضلة (محلياً).</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="viewer" id="viewer">
+      <div class="page-container" id="pageContainer">
+        <!-- صورة الصفحة هنا -->
+        <img id="mushafImg" alt="صفحة المصحف" loading="lazy" src="" />
+      </div>
+      <div class="page-footer">
+        <small id="pageInfo">الصفحة <span id="currentPage">1</span></small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Devloper yousif AlKhulaifi</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
