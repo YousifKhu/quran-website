@@ -124,3 +124,76 @@ body.dark{
   .sidebar{width:100%;max-width:100%}
   .page-container{max-width:100%}
 }
+/* تحسينات عرض الجوال */
+@media (max-width:600px){
+  body {
+    font-size: 14px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .brand h1 {
+    font-size: 1.4rem;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .small-controls input {
+    width: 60px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .action-buttons button {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .surah-list {
+    max-height: 300px;
+  }
+
+  .page-container {
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  .page-container img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .page-footer {
+    font-size: 0.9rem;
+  }
+
+  .site-footer {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+
