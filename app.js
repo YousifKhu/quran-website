@@ -17,6 +17,14 @@
   const fullscreenBtn = document.getElementById('fullscreenBtn');
   const downloadBtn = document.getElementById('downloadBtn');
   const toggleDark = document.getElementById('toggleDark');
+  const pervbitn1 = document.getElementById('prevPage1');
+  const nextbtn1 = document.getElementById('nextPage1');
+  const pageInput1 = document.getElementById('pageInput1');
+  const totalPagesEl1 = document.getElementById('totalPages1');
+  const bookmarkBtn1 = document.getElementById('bookmarkBtn1');
+  const fullscreenBtn1 = document.getElementById('fullscreenBtn1');
+  const downloadBtn1 = document.getElementById('downloadBtn1');
+  const toggleDark1 = document.getElementById('toggleDark1');
 
   // Sidebar surah list
   const surahListEl = document.getElementById('surahList');
@@ -59,6 +67,9 @@
   prevBtn.addEventListener('click', () => gotoPage(state.page - 1));
   nextBtn.addEventListener('click', () => gotoPage(state.page + 1));
   pageInput.addEventListener('change', (e) => gotoPage(Number(e.target.value) || 1));
+  pervbitn1.addEventListener('click', () => gotoPage(state.page - 1));
+  nextbtn1.addEventListener('click', () => gotoPage(state.page + 1));
+  pageInput1.addEventListener('change', (e) => gotoPage(Number(e.target.value) || 1));
 
   // مفاتيح لوحة المفاتيح (يمين/يسار للتصفح)
   window.addEventListener('keydown', (e) => {
